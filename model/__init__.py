@@ -6,7 +6,11 @@ import os
 # importando os elementos definidos no modelo
 from model.base import Base
 from model.centralizer import Centralizer
-from model.accessory import Acessory
+from model.accessory import Accessory
+from model.user import User
+from model.well import Well
+from model.users_analyze_accessories import association_table
+from model.wells_use_accessories import association_table as wells_use_accessories
 
 db_path = "database/"
 # Verifica se o diretorio não existe

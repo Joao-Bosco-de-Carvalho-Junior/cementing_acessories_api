@@ -11,5 +11,5 @@ association_table = Table(
     Column("well_id", ForeignKey("well.id"), primary_key=True),
     Column("accessory_id", ForeignKey("accessory.pk_accessory"), primary_key=True),
     Column("comment", String(4000)),
-    Column("anomaly", Boolean, default=True),
+    Column("anomaly", Boolean, default=False),
 )

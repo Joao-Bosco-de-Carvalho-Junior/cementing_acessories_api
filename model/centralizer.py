@@ -11,20 +11,32 @@ class Centralizer(Accessory):
     )
     restoring_force = Column(Float)
     running_force = Column(Float)
+    well_id = Column(Float, nullable=False)
     type = Column(String(140), nullable=False)
     __mapper_args__ = {
-        "polymorphic_identity": "centralizer",
+        "polymorphic_identity": "Centralizador",
     }
 
-    def __init__(self, restoring_force:float, running_force:float, type:str):
-        """
-        Cria um Centralizer
-
-        Arguments:
-            restoring_force: a força de restauração do centralizador.
-            running_force: a força de descida do centralizador.
-            type: o tipo do centralizador.
-        """
+    def __init__(
+        self,
+        name: str,
+        manufacturer: str,
+        outer_diameter: float,
+        casing_size: float,
+        restoring_force: float,
+        running_force: float,
+        type: str,
+        external_use_cases: str = None,
+        well_id: float,
+    ):
+        super().__init__(
+            name=name,
+            manufacturer=manufacturer,
+            outer_diameter=outer_diameter,
+            casing_size=casing_size,
+            external_use_cases=external_use_cases,
+        )
         self.restoring_force = restoring_force
         self.running_force = running_force
         self.type = type
+        self.well_id = well_id

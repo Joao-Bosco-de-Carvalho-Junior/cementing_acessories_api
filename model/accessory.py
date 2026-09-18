@@ -27,13 +27,16 @@ class Accessory(Base):
 
     def __init__(self, name:str, manufacturer:str, outer_diameter:float, casing_size:float, external_use_cases:str = None, registration_date:Union[DateTime, None] = None):
         """
-        Cria um Produto
+        Cria um Acessório
 
         Arguments:
-            nome: nome do produto.
-            quantidade: quantidade que se espera comprar daquele produto
-            valor: valor esperado para o produto
-            data_insercao: data de quando o produto foi inserido à base
+            name: nome do acessório.
+            manufacturer: fabricante do acessório.
+            outer_diameter: diâmetro externo do acessório.
+            casing_size: tamanho do revestimento do acessório.
+            external_use_cases: casos de uso externos do acessório.
+            registration_date: data de registro do acessório.
+
         """
         self.name = name
         self.manufacturer = manufacturer
