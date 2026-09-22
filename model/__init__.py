@@ -1,6 +1,6 @@
 from sqlalchemy_utils import database_exists, create_database
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 import os
 
 # importando os elementos definidos no modelo
@@ -9,7 +9,7 @@ from model.centralizer import Centralizer
 from model.accessory import Accessory
 from model.user import User
 from model.well import Well
-from model.users_analyze_accessories import association_table
+from model.users_analyze_accessories import association_table as users_analyze_accessories
 from model.wells_use_accessories import association_table as wells_use_accessories
 
 db_path = "database/"
@@ -23,6 +23,13 @@ db_url = 'sqlite:///%s/db.sqlite3' % db_path
 
 # cria a engine de conexão com o banco
 engine = create_engine(db_url, echo=False)
+
+# habilita a verificação de integridade de chaves estrangeiras no SQLite
+@event.listens_for(engine, "connect")
+def enable_sqlite_foreign_keys(dbapi_connection, connection_record):
+    cursor = dbapi_connection.cursor()
+    cursor.execute("PRAGMA foreign_keys=ON")
+    cursor.close()
 
 # Instancia um criador de seção com o banco
 Session = sessionmaker(bind=engine)

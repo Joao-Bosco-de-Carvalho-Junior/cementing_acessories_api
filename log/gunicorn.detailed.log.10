@@ -1,0 +1,81 @@
+[2026-09-22 16:39:41,294] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 16:39:43,778] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 16:39:43] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 16:39:43,911] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 16:39:43] "GET /openapi/swagger/css/swagger-ui.css HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 16:39:43,917] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 16:39:43] "GET /openapi/swagger/js/swagger-ui-bundle.js HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 16:39:43,930] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 16:39:43] "GET /openapi/swagger/js/swagger-ui-standalone-preset.js HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 16:39:44,019] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 16:39:44] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 16:39:44,613] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 16:39:44] "GET /openapi/swagger/images/swagger.svg HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:03:58,055] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\schemas\\user.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:03:58,253] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:02,802] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\schemas\\user.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:02,944] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:07,451] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:07] "GET /user?name=JBCJ HTTP/1.1" 404 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:27,899] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:27] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:28,040] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:28] "GET /openapi/swagger/css/swagger-ui.css HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:28,043] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:28] "GET /openapi/swagger/js/swagger-ui-bundle.js HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:28,057] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:28] "GET /openapi/swagger/js/swagger-ui-standalone-preset.js HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:28,250] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:28] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:28,828] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:28] "GET /openapi/swagger/images/swagger.svg HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:32,618] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:32] "GET /user?name=JBCJ HTTP/1.1" 404 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:38,784] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:38] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:05:49,634] ERROR log_exception() L875  Exception on /user [GET] - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py L875 
+Traceback (most recent call last):
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_openapi3\scaffold.py", line 138, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\app.py", line 402, in get_user
+    return show_user(user), 200
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\schemas\user.py", line 54, in show_user
+    "accessory_id": accessory.material_number,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'UserAnalyzeAccessory' object has no attribute 'material_number'
+[2026-09-22 17:05:49,634] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:05:49] "GET /user?name=Usuario%20Teste HTTP/1.1" 500 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:09:03,628] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\schemas\\user.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:09:03,832] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:09:07,661] ERROR log_exception() L875  Exception on /user [GET] - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py L875 
+Traceback (most recent call last):
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_openapi3\scaffold.py", line 138, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\app.py", line 402, in get_user
+    return show_user(user), 200
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\schemas\user.py", line 54, in show_user
+    "accessory_id": table.accessory.material_number,
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'material_number'
+[2026-09-22 17:09:07,661] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:09:07] "GET /user?name=Usuario%20Teste HTTP/1.1" 500 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:09:09,634] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:09:09] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:09:09,741] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:09:09] "GET /openapi/swagger/css/swagger-ui.css HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:10:23,694] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  

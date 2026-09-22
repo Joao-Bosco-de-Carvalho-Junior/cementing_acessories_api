@@ -1,0 +1,81 @@
+[2026-09-22 17:40:24,447] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:40:27,857] ERROR log_exception() L875  Exception on /accessory [GET] - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py L875 
+Traceback (most recent call last):
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_openapi3\scaffold.py", line 138, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\app.py", line 170, in get_accessory
+    return show_accessory(acessory), 200
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\schemas\accessory.py", line 76, in show_accessory
+    "users":[{"name": link.user.name,
+                     ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2026-09-22 17:40:27,866] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:40:27] "GET /accessory?material_number=1 HTTP/1.1" 500 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:41:32,709] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\schemas\\accessory.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:41:32,858] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:41:36,078] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:41:36] "GET /accessory?material_number=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:42:31,906] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:42:31] "DELETE /well?name=7-RO-203H-RJS HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:42:38,393] ERROR log_exception() L875  Exception on /accessory [GET] - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py L875 
+Traceback (most recent call last):
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_cors\extension.py", line 206, in wrapped_function
+    return cors_after_request(app_any.make_response(f(*args, **kwargs)))
+                                                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\flask_openapi3\scaffold.py", line 138, in view_func
+    response = func(**func_kwargs)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\app.py", line 170, in get_accessory
+    return show_accessory(acessory), 200
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cjoao\Desktop\Codes\MVP1\cementing_acessories_api\schemas\accessory.py", line 79, in show_accessory
+    "wells":[{"name": link.well.name,
+                     ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+[2026-09-22 17:42:38,406] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:42:38] "GET /accessory?material_number=1 HTTP/1.1" 500 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:43:23,669] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\schemas\\accessory.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:43:23,832] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:43:25,538] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:43:25] "GET /accessory?material_number=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:46:38,233] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\model\\well.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:46:38,567] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:48:55,357] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\model\\well.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:48:55,673] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:49:24,813] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:49:24] "GET /accessory?material_number=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:50:07,174] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:50:07] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:50:17,243] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:50:17] "POST /well HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:50:27,904] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:50:27] "POST /well/accessory HTTP/1.1" 404 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:50:39,776] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:50:39] "POST /well/accessory HTTP/1.1" 201 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:50:51,009] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:50:51] "GET /accessory?material_number=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:51:00,216] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:51:00] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:51:00,560] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:51:00] "GET /openapi/swagger/css/swagger-ui.css HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:51:00,801] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:51:00] "GET /openapi/swagger/js/swagger-ui-standalone-preset.js HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:51:00,831] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:51:00] "GET /openapi/swagger/js/swagger-ui-bundle.js HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:51:00,927] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:51:00] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:51:00,976] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:51:00] "GET /openapi/swagger/images/swagger.svg HTTP/1.1" 304 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-22 17:51:06,476] INFO _log() L97   127.0.0.1 - - [22/Sep/2026 17:51:06] "GET /accessory?material_number=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
