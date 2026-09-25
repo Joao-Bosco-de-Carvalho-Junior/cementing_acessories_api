@@ -11,6 +11,16 @@ class WellSchema(BaseModel):
     """
     name: str = "7-RO-203H-RJS"
 
+class WellWithIDSchema(BaseModel):
+    """ Define como um poço com ID deve ser representado
+    """
+    id: int = 1
+    name: str = "7-RO-203H-RJS"
+
+class WellSearchSchema(BaseModel):
+    """Define como um poço deve ser identificado em uma consulta."""
+    id: int = 1
+
 class AccessoryInWellSchema(BaseModel):
     """ Define como um acessório deve ser representado dentro de um poço.
     """
@@ -22,6 +32,7 @@ class AccessoryInWellSchema(BaseModel):
 class WellWithAccessoriesSchema(BaseModel):
     """ Define como um novo poço e seus acessórios devem ser representados
     """
+    id: int = 1
     name: str = "7-RO-203H-RJS"
     accessories: list[AccessoryInWellSchema] = []
 
@@ -37,6 +48,7 @@ def show_wells(wells: List[Well]):
     result = []
     for well in wells:
         well_data = {
+            "id": well.id,
             "name": well.name,
         }
         result.append(well_data)
@@ -48,6 +60,7 @@ def show_well(well: Well):
         WellWithAccessoriesSchema.
     """
     well_data = {
+        "id": well.id,
         "name": well.name,
         "accessories":[{"name": link.accessory.name, 
                   "anomaly": link.anomaly, 

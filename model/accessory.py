@@ -14,7 +14,7 @@ class Accessory(Base):
 
     # chave primária do acessório, que é o número de material
     #pré definido no SAP.
-    material_number = Column("pk_accessory", Integer, primary_key=True)
+    id = Column("pk_accessory", Integer, primary_key=True)
     # tipo do acessório, que pode ser "centralizer", "shoe", etc
     # este campo é usado para o mapeamento polimórfico do SQLAlchemy.
     accessory_type = Column(String(50), nullable=False)
@@ -25,12 +25,12 @@ class Accessory(Base):
     outer_diameter = Column(Float, nullable=False)
     casing_size = Column(Float, nullable=False)
     external_use_cases = Column(String(4000))
-    registration_date = Column(DateTime, default=datetime.now())
+    registration_date = Column(DateTime, default=datetime.now)
     # o campo last_update_date é atualizado automaticamente pelo
     # campo onupdate do SQLAlchemy, que é chamado sempre que o objeto é atualizado.
     last_update_date = Column(DateTime, 
-                              default=datetime.now(), 
-                              onupdate=datetime.now())
+                              default=datetime.now, 
+                              onupdate=datetime.now)
     # relacionamento com o objeto de associação users_analyze_accessories,
     # que expõe o usuário junto com o comentário e a aprovação da relação
     # (o back_populates é usado para definir o relacionamento inverso na classe User)

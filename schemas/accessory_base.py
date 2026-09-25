@@ -22,7 +22,7 @@ class AccessoryBaseCreateSchema(BaseModel):
 
 class AccessoryBaseUpdateSchema(BaseModel):
     """Define os campos comuns aceitos na atualização de um acessório."""
-    material_number: int = 1
+    id: int = 1
     name: Optional[str] = None
     manufacturer: Optional[str] = None
     outer_diameter: Optional[float] = None
@@ -45,7 +45,7 @@ class AccessoryBaseUpdateSchema(BaseModel):
 class AccessoryBaseSearchSchema(BaseModel):
     """ Define como um acessório deve ser representado para fins de busca.
     """
-    material_number: Optional[int] = 1
+    id: int = 1
     # desejo filtrar pelos campos abaixo, mas acho que isso deve ser feito pelo front
     # e passar apenas o ID do acessório, então não vou implementar por enquanto.
     #name: Optional[str] = "Centralizador 10 3/4 x 13 1/2"
@@ -56,7 +56,7 @@ class AccessoryBaseSearchSchema(BaseModel):
 class AccessoryBaseListSchema(BaseModel):
     """ Define como uma lista de acessórios deve ser representada
     """
-    material_number: int = 1
+    id: int = 1
     accesory_type: str = "Centralizer"
     name: str = "Centralizador 10 3/4 x 13 1/2"
     manufacturer: str = "Fabricante"
@@ -83,7 +83,7 @@ class WellInAccessorySchema(BaseModel):
 class AccessoryBaseViewSchema(BaseModel):
     """ Define como um produto será retornado: produto + usuários e poços associados.
     """
-    material_number: int = 1
+    id: int = 1
     accesory_type: str = "Centralizer"
     name: str = "Centralizador 10 3/4 x 13 1/2"
     manufacturer: str = "Fabricante"
@@ -103,5 +103,5 @@ class AccessoryBaseDelSchema(BaseModel):
     mesage: str
     accessory_type: str
     name: str
-    material_number: int
+    id: int
     manufacturer: str

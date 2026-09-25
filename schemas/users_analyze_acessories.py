@@ -10,9 +10,8 @@ class UserAnalyzeAccessorySchema(BaseModel):
     """
     comment: Optional[str] = "Nada a declarar"
     approval: bool = True
-    approval_date: Optional[datetime] = datetime.now()
 
 class UserAnalyzeAccessoryCreateSchema(UserAnalyzeAccessorySchema):
     """Define os dados necessários para análise de um acessório por um usuário."""
-    user_name: str = "JBCJ"
+    user_id: int = 1
     accessory_id: int = 1

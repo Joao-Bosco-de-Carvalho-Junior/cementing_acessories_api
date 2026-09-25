@@ -21,7 +21,7 @@ association_table = Table(
     Column("accessory_id", ForeignKey("accessory.pk_accessory", ondelete="CASCADE")),
     Column("comment", String(4000)),
     Column("approval", Boolean, default=True),
-    Column("approval_date", DateTime, default=datetime.now())
+    Column("approval_date", DateTime, default=datetime.now)
 )
 
 

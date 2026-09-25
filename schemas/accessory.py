@@ -39,7 +39,7 @@ def show_accessories(accessories: List[Accessory]):
     result = []
     for accessory in accessories:
         accessory_data = {
-            "material_number": accessory.material_number,
+            "id": accessory.id,
             "accessory_type": accessory.accessory_type,
             "name": accessory.name,
             "manufacturer": accessory.manufacturer,
@@ -62,7 +62,7 @@ def show_accessory(accessory: Accessory):
     """
 
     result = {
-        "material_number": accessory.material_number,
+        "id": accessory.id,
         "accessory_type": accessory.accessory_type,
         "name": accessory.name,
         "manufacturer": accessory.manufacturer,

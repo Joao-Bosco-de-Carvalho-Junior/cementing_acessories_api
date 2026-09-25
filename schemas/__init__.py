@@ -1,10 +1,13 @@
 from schemas.well import (WellSchema, 
+                          WellSearchSchema,
+                          WellWithIDSchema,
                           WellWithAccessoriesSchema, 
                           AccessoryInWellSchema, 
                           WellListSchema
 )
 from schemas.user import (
 	UserSchema,
+	UserWithIDSchema,
 	UserSearchSchema,
 	UserUpdateSchema,
 	UserListSchema,

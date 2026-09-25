@@ -12,7 +12,7 @@ class Centralizer(Accessory):
     # que é uma chave estrangeira para a tabela accessory
     # ou seja, adequado ao projeto conceitual de herança (as-is-a) do
     # modelo relacional, onde o centralizador é um acessório
-    material_number = Column(
+    id = Column(
         ForeignKey("accessory.pk_accessory"),
         primary_key=True,
     )

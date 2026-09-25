@@ -49,7 +49,7 @@ def home():
     return redirect('/openapi/swagger')
 
 
-@app.post('/acessory', tags=[accessory_tag],
+@app.post('/accessory', tags=[accessory_tag],
           responses={"200": AccessoryViewSchema, "409": ErrorSchema, "400": ErrorSchema})
 def add_accessory(form: AccessoryCreateSchema):
     """Adiciona um novo Acessório à base de dados
@@ -91,18 +91,18 @@ def update_accessory(form: AccessoryUpdateSchema):
     """
     # criando conexão com a base
     session = Session()
-    accessory = session.query(Accessory).filter(Accessory.material_number == form.material_number).first()
+    accessory = session.query(Accessory).filter(Accessory.id == form.id).first()
 
     if not accessory:
         error_msg = "Acessório não encontrado na base :/"
-        logger.warning(f"Erro ao atualizar acessório #{form.material_number}, {error_msg}")
+        logger.warning(f"Erro ao atualizar acessório #{form.id}, {error_msg}")
         return {"message": error_msg}, 404
 
     logger.debug(f"Atualizando acessório de nome: '{accessory.name}'")
     try:
         # atualizando acessório
         accessory_data = form.model_dump(
-            exclude={"material_number", "accessory_type"},
+            exclude={"id", "accessory_type"},
             exclude_unset=True,
             exclude_none=True,
         )
@@ -152,17 +152,17 @@ def get_accessory(query: AccessorySearchSchema):
 
     Retorna uma representação dos acessórios e comentários associados.
     """
-    acessory_material_number = query.material_number
-    logger.debug(f"Coletando dados sobre acessório #{acessory_material_number}")
+    acessory_id = query.id
+    logger.debug(f"Coletando dados sobre acessório #{acessory_id}")
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    acessory = session.query(Accessory).filter(Accessory.material_number == acessory_material_number).first()
+    acessory = session.query(Accessory).filter(Accessory.id == acessory_id).first()
 
     if not acessory:
         # se o acessório não foi encontrado
         error_msg = "Acessório não encontrado na base :/"
-        logger.warning(f"Erro ao buscar acessório '{acessory_material_number}', {error_msg}")
+        logger.warning(f"Erro ao buscar acessório '{acessory_id}', {error_msg}")
         return {"message": error_msg}, 404
     else:
         logger.debug(f"Acessório encontrado: '{acessory.name}'")
@@ -177,28 +177,28 @@ def del_accessory(query: AccessorySearchSchema):
 
     Retorna uma mensagem de confirmação da remoção.
     """
-    acessory_material_number = query.material_number
-    print(acessory_material_number)
-    logger.debug(f"Deletando dados sobre acessório #{acessory_material_number}")
+    acessory_id = query.id
+    print(acessory_id)
+    logger.debug(f"Deletando dados sobre acessório #{acessory_id}")
     # criando conexão com a base
     session = Session()
     # Carrega a instância para que o SQLAlchemy remova também a subclasse.
-    accessory = session.get(Accessory, acessory_material_number)
+    accessory = session.get(Accessory, acessory_id)
 
     if accessory:
         session.delete(accessory)
         session.commit()
         # retorna a representação da mensagem de confirmação
-        logger.debug(f"Deletado acessório #{acessory_material_number}")
-        return {"message": "Acessório removido", "id": acessory_material_number}
+        logger.debug(f"Deletado acessório #{acessory_id}")
+        return {"message": "Acessório removido", "id": acessory_id}
     else:
         # se o acessório não foi encontrado
         error_msg = "Acessório não encontrado na base :/"
-        logger.warning(f"Erro ao deletar acessório #'{acessory_material_number}', {error_msg}")
+        logger.warning(f"Erro ao deletar acessório #'{acessory_id}', {error_msg}")
         return {"message": error_msg}, 404
 
 @app.post('/well', tags=[well_tag],
-             responses={"200": WellSchema, "409": ErrorSchema, "400": ErrorSchema})
+             responses={"200": WellWithIDSchema, "409": ErrorSchema, "400": ErrorSchema})
 def add_well(form: WellSchema):
     """Adiciona um novo Poço à base de dados
     """
@@ -212,7 +212,7 @@ def add_well(form: WellSchema):
         # efetivando o camando de adição de novo item na tabela
         session.commit()
         logger.debug(f"Adicionado poço de nome: '{well.name}'")
-        return {"name": well.name}, 200
+        return {"id": well.id, "name": well.name}, 200
 
     except IntegrityError as e:
         session.rollback()
@@ -226,6 +226,27 @@ def add_well(form: WellSchema):
         error_msg = "Não foi possível salvar novo item :/"
         logger.warning(f"Erro ao adicionar poço '{well.name}', {error_msg}")
         return {"message": error_msg}, 400
+
+@app.patch('/well', tags=[well_tag],
+           responses={"200": WellWithAccessoriesSchema, "404": ErrorSchema, "409": ErrorSchema, "400": ErrorSchema})
+def update_well(form: WellWithIDSchema):
+    """Atualiza o nome de um poço."""
+    session = Session()
+    well = session.get(Well, form.id)
+
+    if not well:
+        return {"message": "Poço não encontrado na base :/"}, 404
+
+    try:
+        well.name = form.name
+        session.commit()
+        return show_well(well), 200
+    except IntegrityError:
+        session.rollback()
+        return {"message": "Poço de mesmo nome já salvo na base :/"}, 409
+    except Exception:
+        session.rollback()
+        return {"message": "Não foi possível atualizar o poço :/"}, 400
 
 @app.get('/wells', tags=[well_tag],
          responses={"200": WellListSchema, "404": ErrorSchema})
@@ -253,53 +274,53 @@ def get_wells():
 
 @app.get('/well', tags=[well_tag],
          responses={"200": WellWithAccessoriesSchema, "404": ErrorSchema})
-def get_well(query: WellSchema):
-    """Faz a busca por um Poço a partir do nome do poço
+def get_well(query: WellSearchSchema):
+    """Faz a busca por um Poço a partir do ID do poço
 
     Retorna uma representação do poço e seus acessórios associados.
     """
-    well_name = query.name
-    logger.debug(f"Coletando dados sobre poço '{well_name}'")
+    well_id = query.id
+    logger.debug(f"Coletando dados sobre poço '{well_id}'")
     # criando conexão com a base
     session = Session()
     # fazendo a busca
-    well = session.query(Well).filter(Well.name == well_name).first()
+    well = session.query(Well).filter(Well.id == well_id).first()
 
     if not well:
         # se o poço não foi encontrado
         error_msg = "Poço não encontrado na base :/"
-        logger.warning(f"Erro ao buscar poço '{well_name}', {error_msg}")
+        logger.warning(f"Erro ao buscar poço '{well_id}', {error_msg}")
         return {"message": error_msg}, 404
     else:
-        logger.debug(f"Poço encontrado: '{well.name}'")
+        logger.debug(f"Poço encontrado: '{well.id}'")
         # retorna a representação do poço
         return show_well(well), 200
 
 
 @app.delete('/well', tags=[well_tag],
             responses={"200": WellSchema, "404": ErrorSchema})
-def del_well(query: WellSchema):
-    """Deleta um Poço a partir do nome do poço informado
+def del_well(query: WellSearchSchema):
+    """Deleta um Poço a partir do ID do poço informado
 
     Retorna uma mensagem de confirmação da remoção.
     """
-    well_name = query.name
-    logger.debug(f"Deletando dados sobre poço '{well_name}'")
+    well_id = query.id
+    logger.debug(f"Deletando dados sobre poço '{well_id}'")
     # criando conexão com a base
     session = Session()
     # Carrega a instância.
-    well = session.query(Well).filter(Well.name == well_name).first()
+    well = session.query(Well).filter(Well.id == well_id).first()
 
     if well:
         session.delete(well)
         session.commit()
         # retorna a representação da mensagem de confirmação
-        logger.debug(f"Deletado poço '{well_name}'")
-        return {"message": "Poço removido", "name": well_name}
+        logger.debug(f"Deletado poço '{well_id}'")
+        return {"message": "Poço removido", "id": well_id}
     else:
         # se o poço não foi encontrado
         error_msg = "Poço não encontrado na base :/"
-        logger.warning(f"Erro ao deletar poço '{well_name}', {error_msg}")
+        logger.warning(f"Erro ao deletar poço '{well_id}', {error_msg}")
         return {"message": error_msg}, 404
 
 @app.post('/well/accessory', tags=[well_tag],
@@ -319,15 +340,15 @@ def add_accessory_to_well(form: WellUseAccessoryCreateSchema):
     try:
         association = wells_use_accessories_table.insert().values(
             well_id=well.id,
-            accessory_id=accessory.material_number,
+            accessory_id=accessory.id,
             comment=form.comment,
             anomaly=form.anomaly,
         )
         session.execute(association)
         session.commit()
         return {
-            "well_name": well.name,
-            "accessory_id": accessory.material_number,
+            "well_id": well.id,
+            "accessory_id": accessory.id,
             "comment": form.comment,
             "anomaly": form.anomaly,
         }, 201
@@ -343,7 +364,7 @@ def add_accessory_to_well(form: WellUseAccessoryCreateSchema):
         return {"message": "Não foi possível associar o acessório ao poço :/"}, 400
 
 @app.post('/user', tags=[user_tag],
-          responses={"200": UserSchema, "409": ErrorSchema, "400": ErrorSchema})
+          responses={"200": UserWithIDSchema, "409": ErrorSchema, "400": ErrorSchema})
 def add_user(form: UserSchema):
     """Adiciona um novo usuário à base de dados."""
     user = User(name=form.name)
@@ -351,7 +372,7 @@ def add_user(form: UserSchema):
     try:
         session.add(user)
         session.commit()
-        return {"name": user.name}, 200
+        return {"id": user.id, "name": user.name}, 200
     except IntegrityError:
         session.rollback()
         return {"message": "Usuário de mesmo nome já salvo na base :/"}, 409
@@ -365,7 +386,7 @@ def add_user(form: UserSchema):
 def update_user(form: UserUpdateSchema):
     """Atualiza o nome de um usuário."""
     session = Session()
-    user = session.query(User).filter_by(name=form.current_name).first()
+    user = session.get(User, form.id)
 
     if not user:
         return {"message": "Usuário não encontrado na base :/"}, 404
@@ -395,7 +416,7 @@ def get_users():
 def get_user(query: UserSearchSchema):
     """Retorna um usuário pelo nome."""
     session = Session()
-    user = session.query(User).filter_by(name=query.name).first()
+    user = session.query(User).filter_by(id=query.id).first()
 
     if not user:
         return {"message": "Usuário não encontrado na base :/"}, 404
@@ -407,14 +428,14 @@ def get_user(query: UserSearchSchema):
 def del_user(query: UserSearchSchema):
     """Remove um usuário pelo nome."""
     session = Session()
-    user = session.query(User).filter_by(name=query.name).first()
+    user = session.query(User).filter_by(id=query.id).first()
 
     if not user:
         return {"message": "Usuário não encontrado na base :/"}, 404
 
     session.delete(user)
     session.commit()
-    return {"message": "Usuário removido", "name": query.name}, 200
+    return {"message": "Usuário removido", "id": query.id}, 200
 
 @app.post('/user/accessory', tags=[user_tag],
           responses={"201": UserAnalyzeAccessoryCreateSchema, "404": ErrorSchema, "409": ErrorSchema, "400": ErrorSchema})
@@ -422,7 +443,7 @@ def user_analyze_accessory(form: UserAnalyzeAccessoryCreateSchema):
     """Registra análise de acessório, registrando se foi aprovado, comentários e data.
     """
     session = Session()
-    user = session.query(User).filter_by(name=form.user_name).first()
+    user = session.get(User, form.user_id)
     accessory = session.get(Accessory, form.accessory_id)
 
     # quando tiver auth/aut, acho que não faz sentido esta verificação,
@@ -436,15 +457,15 @@ def user_analyze_accessory(form: UserAnalyzeAccessoryCreateSchema):
     try:
         association = users_analyze_accessories_table.insert().values(
             user_id=user.id,
-            accessory_id=accessory.material_number,
+            accessory_id=accessory.id,
             comment=form.comment,
             approval=form.approval,
         )
         session.execute(association)
         session.commit()
         return {
-            "user_name": user.name,
-            "accessory_id": accessory.material_number,
+            "user_id": user.id,
+            "accessory_id": accessory.id,
             "comment": form.comment,
             "approval": form.approval,
         }, 201
