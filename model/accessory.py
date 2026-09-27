@@ -34,6 +34,7 @@ class Accessory(Base):
     # relacionamento com o objeto de associação users_analyze_accessories,
     # que expõe o usuário junto com o comentário e a aprovação da relação
     # (o back_populates é usado para definir o relacionamento inverso na classe User)
+    #passive_deletes indica que a exclusão em cascata deve ser aplicada quando o objeto pai é excluído.
     users = relationship("UserAnalyzeAccessory", 
                          back_populates="accessory",
                          passive_deletes=True,
@@ -41,6 +42,7 @@ class Accessory(Base):
     # relacionamento com o objeto de associação wells_use_accessories,
     # que expõe o poço junto com o comentário e a anomalia da relação
     # (o back_populates é usado para definir o relacionamento inverso na classe Well)
+    #passive_deletes indica que a exclusão em cascata deve ser aplicada quando o objeto pai é excluído.
     wells = relationship(
         "WellUseAccessory",
         back_populates="accessory",

@@ -1,52 +1,52 @@
-[2026-09-25 15:17:49,279] INFO _log() L97   WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+[2026-09-25 17:38:30,498] INFO _log() L97   WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.15.6:5000 - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:17:49,282] INFO _log() L97   Press CTRL+C to quit - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:17:49,284] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:17:50,973] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:17:50] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:17:51,989] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:17:51] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:17:54,679] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:17:54] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:17:55,507] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:17:55] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:18:37,366] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:18:37] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:18:38,456] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:18:38] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:18:45,699] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:18:45] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:20:11,859] INFO _log() L97   WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+[2026-09-25 17:38:30,500] INFO _log() L97   Press CTRL+C to quit - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:38:30,503] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:38:34,311] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:38:34] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:38:36,415] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:38:36] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:38:37,816] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:38:37] "GET /well?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:38:45,594] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:38:45] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:38:46,722] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:38:46] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:39:00,027] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:39:00] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:39:00,956] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:39:00] "GET /well?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:39:02,837] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:39:02] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:39:03,635] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:39:03] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:41:15,506] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\schemas\\user.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:41:15,658] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:42:05,051] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:42:05] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:42:06,792] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:42:06] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:42:07,836] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:42:07] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:10,046] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:10] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:10,971] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:10] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:11,882] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:11] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:19,206] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:19] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:19,958] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:19] "GET /well?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:23,322] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:23] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:24,204] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:24] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:50,169] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:50] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:51,714] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:51] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:52,349] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:52] "GET /well?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:58,003] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:58] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:44:59,724] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:44:59] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:00,990] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:00] "GET /well?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:03,024] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:03] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:03,715] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:03] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:10,451] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:10] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:11,492] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:11] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:49,722] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:49] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:51,268] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:51] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:56,652] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:56] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:57,551] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:57] "GET /well?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:45:59,576] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:45:59] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:46:00,454] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:46:00] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:46:44,618] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:46:44] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:46:45,300] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:46:45] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-25 17:46:46,541] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 17:46:46] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 16:47:57,789] INFO _log() L97   WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.15.6:5000 - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:20:11,859] INFO _log() L97   Press CTRL+C to quit - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:20:11,871] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:20:16,259] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:20:16] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:20:17,930] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:20:17] "GET /wells HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:20:19,136] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:20:19] "GET /well?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:11,124] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:11] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:15,030] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:15] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:15,734] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:15] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:26,035] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:26] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:26,884] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:26] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:33,118] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:33] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:33,867] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:33] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:37,302] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:37] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:38,653] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:38] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:44,326] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:44] "OPTIONS /user HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:44,441] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:44] "PATCH /user HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:44,452] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:44] "GET /user?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:21:48,758] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 15:21:48] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:27:04,792] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\schemas\\users_analyze_acessories.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:27:05,227] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:27:57,989] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\app.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:27:58,165] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:28:49,258] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\app.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 15:28:49,588] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:10:17,064] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:10:17] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:11:40,747] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:11:40] "GET /users HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:11:42,769] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:11:42] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:14:14,886] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:14:14] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:14:18,863] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:14:18] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:14:19,928] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:14:19] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:14:52,212] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:14:52] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:14:53,177] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:14:53] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:15:24,447] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:15:24] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:15:25,179] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:15:25] "GET /accessory?id=1 HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-25 16:16:20,828] INFO _log() L97   127.0.0.1 - - [25/Sep/2026 16:16:20] "GET /accessories HTTP/1.1" 200 - - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 16:47:57,830] INFO _log() L97   Press CTRL+C to quit - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 16:47:57,941] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  

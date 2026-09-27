@@ -65,5 +65,7 @@ def show_well(well: Well):
         "accessories":[{"name": link.accessory.name, 
                   "anomaly": link.anomaly, 
                   "comment": link.comment} for link in well.accessories],
+# para cada link de acessório analisado pelo usuário, de acordo
+# com tabela de relacionamento entre usuários e acessórios.
     }
     return well_data

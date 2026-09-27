@@ -2,8 +2,6 @@
 
 Este é um projeto para cadastro e análise de accessórios de cimentação de poço de petróleo, para verificar se seu uso é permitido ou não.
 
-Além disso, verifica se há alguma restrição, seja por compatibilidade entre os materiais ou por algum cenário específico do poço. 
-
 ---
 ## Como executar 
 

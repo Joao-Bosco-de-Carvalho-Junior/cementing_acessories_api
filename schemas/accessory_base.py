@@ -11,7 +11,7 @@ from schemas.wells_use_accessories import WellUseAccessorySchema
 
 
 class AccessoryBaseCreateSchema(BaseModel):
-    """ Define como um novo acessório a ser inserido deve ser representado
+    """ Define os campos comuns aceitos na criação de um acessório.
     """
     name: str = "Centralizador 10 3/4 x 13 1/2"
     manufacturer: str = "Fabricante"
@@ -29,6 +29,7 @@ class AccessoryBaseUpdateSchema(BaseModel):
     casing_size: Optional[float] = None
     external_use_cases: Optional[str] = None
 
+    #validator para converter strings "null" em None
     @field_validator(
         "name",
         "manufacturer",
@@ -43,7 +44,7 @@ class AccessoryBaseUpdateSchema(BaseModel):
 
 
 class AccessoryBaseSearchSchema(BaseModel):
-    """ Define como um acessório deve ser representado para fins de busca.
+    """ Define campos comuns de acessório que devem ser representados para fins de busca.
     """
     id: int = 1
     # desejo filtrar pelos campos abaixo, mas acho que isso deve ser feito pelo front
@@ -54,7 +55,7 @@ class AccessoryBaseSearchSchema(BaseModel):
 
 
 class AccessoryBaseListSchema(BaseModel):
-    """ Define como uma lista de acessórios deve ser representada
+    """ Define campos comuns de acessório que devem ser representados em uma lista.
     """
     id: int = 1
     accesory_type: str = "Centralizer"
@@ -81,7 +82,7 @@ class WellInAccessorySchema(BaseModel):
 
 
 class AccessoryBaseViewSchema(BaseModel):
-    """ Define como um produto será retornado: produto + usuários e poços associados.
+    """ Define campos comuns de acessório que devem ser representados na visualização detalhada.
     """
     id: int = 1
     accesory_type: str = "Centralizer"
@@ -97,9 +98,12 @@ class AccessoryBaseViewSchema(BaseModel):
 
 
 class AccessoryBaseDelSchema(BaseModel):
-    """ Define como deve ser a estrutura do dado retornado após uma requisição
+    """ Define campos comuns de acessório que devem ser representados na estrutura do dado retornado após uma requisição
         de remoção.
     """
+    #Por enquanto, apenas id e mesage foram utiilziados
+    #próximas revisões podem incluir outros campos específicos do acessório.
+    #na mensagem de retorno.
     mesage: str
     accessory_type: str
     name: str

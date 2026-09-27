@@ -64,6 +64,8 @@ def show_user(user):
                 "comment": link.comment,
             }
             for link in user.accessories
+# para cada link de acessório analisado pelo usuário, de acordo
+# com tabela de relacionamento entre usuários e acessórios.
         ],
     }
 

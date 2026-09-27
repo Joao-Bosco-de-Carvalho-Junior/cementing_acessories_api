@@ -18,7 +18,7 @@ class Centralizer(Accessory):
     )
     restoring_force = Column(Float)
     running_force = Column(Float)
-    well_id = Column(Float, nullable=False)
+    well_diameter = Column(Float, nullable=False)
     type = Column(String(140), nullable=False)
     # aqui definimos o tipo de acessório (polimorfismo) como "centralizer", 
     # que é usado pelo SQLAlchemy para instanciar a classe correta
@@ -35,7 +35,7 @@ class Centralizer(Accessory):
         restoring_force: float,
         running_force: float,
         type: str,
-        well_id: float,
+        well_diameter: float,
         external_use_cases: str
     ):
         """
@@ -49,7 +49,7 @@ class Centralizer(Accessory):
             restoring_force: força de restauração do centralizador.
             running_force: força de descida do centralizador.
             type: tipo do centralizador.
-            well_id: ID do poço associado ao centralizador.
+            well_diameter: ID do poço associado ao centralizador.
             external_use_cases: casos de uso externos do centralizador.
 
         """
@@ -63,4 +63,4 @@ class Centralizer(Accessory):
         self.restoring_force = restoring_force
         self.running_force = running_force
         self.type = type
-        self.well_id = well_id
+        self.well_diameter = well_diameter

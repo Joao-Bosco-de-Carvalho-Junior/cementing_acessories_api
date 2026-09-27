@@ -18,20 +18,20 @@ class CentralizerSchema(AccessoryBaseCreateSchema):
     accessory_type: Literal["centralizer"] = "centralizer"
     restoring_force: Optional[float] = 1250
     running_force: Optional[float] = 1000
-    well_id: float = 13.5
+    well_diameter: float = 13.5
     type: str = "Flexível"
 
 
 class CentralizerUpdateSchema(AccessoryBaseUpdateSchema):
-    """Define os campos comuns e específicos na atualização de um centralizador."""
+    """Define os campos específicos na atualização de um centralizador."""
     restoring_force: Optional[float] = None
     running_force: Optional[float] = None
-    well_id: Optional[float] = None
+    well_diameter: Optional[float] = None
     type: Optional[str] = None
 
     @field_validator("restoring_force", 
                      "running_force", 
-                     "well_id",
+                     "well_diameter",
                      "outer_diameter",
                      "casing_size", 
                      "type",
@@ -51,13 +51,13 @@ class CentralizerSearchSchema(AccessoryBaseSearchSchema):
     # desejo filtrar pelos campos abaixo, mas acho que isso deve ser feito pelo front
     # e passar apenas o ID do acessório, então não vou implementar por enquanto.
     #type: Optional[str] = "Flexível"
-    #well_id: Optional[float] = 13.5
+    #well_diameter: Optional[float] = 13.5
 
 class CentralizerBaseListSchema(AccessoryBaseListSchema):
     """ Define os campos específicos que serão retornados na listagem de centralizadores.
     """
     type: str = "Flexível"
-    well_id: float = 13.5
+    well_diameter: float = 13.5
 
 
 class CentralizerListSchema(BaseModel):
@@ -71,7 +71,7 @@ class CentralizerViewSchema(AccessoryBaseViewSchema):
     """
     restoring_force: float = 1250
     running_force: float = 1000
-    well_id: float = 13.5
+    well_diameter: float = 13.5
     type: str = "Flexível"
 
 
@@ -88,7 +88,7 @@ def update_centralizer(centralizer: Centralizer, result):
     """
     result.update({
         "type": centralizer.type,
-        "well_id": centralizer.well_id,
+        "well_diameter": centralizer.well_diameter,
     })
 
 # não estou usando esta função, mas deixei aqui para referência futura,
@@ -110,7 +110,7 @@ def show_centralizer(centralizer: Centralizer):
     """
     return {
         "type": centralizer.type,
-        "well_id": centralizer.well_id,
+        "well_diameter": centralizer.well_diameter,
         "restoring_force": centralizer.restoring_force,
         "running_force": centralizer.running_force,
     }

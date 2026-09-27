@@ -8,10 +8,12 @@ from datetime import datetime
 # esta tabela é necessária para poder armazenar informações adicionais
 # sobre a relação, como comentários e aprovação, que não são propriamente 
 # atributos do usuário ou do acessório, mas sim da relação entre eles.
-# user_id e accessory_id são anuláveis (com ON DELETE SET NULL) para que
-# a análise seja preservada mesmo depois que o usuário ou o acessório
-# associado a ela sejam removidos.
+# user_id é anulável (com ON DELETE SET NULL) para que
+# a análise seja preservada mesmo depois que o usuário
+# associado a ela seja removido.
 # Se usuário removido, desejo que outros usuários ainda possam ver a análise.
+# Se acessório removido, a análise será removida em cascata devido ao ON DELETE CASCADE.
+# Não faz sentido manter a análise se o acessório não existir mais.
 
 association_table = Table(
     "users_analyze_accessories",
