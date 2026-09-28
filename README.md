@@ -1,6 +1,8 @@
 # Cementing Accessories API
 
-Este é um projeto para cadastro e análise de accessórios de cimentação de poço de petróleo, para verificar se seu uso é permitido ou não.
+Este tem o intuito de poder cadastrar análise de acessórios, para aprovar seu uso e também registrar histórico de uso de acessórios em poços de petróleo.
+
+Assim, é possível verificar os melhores acessórios e também evitar recorrência de falhas operacionais.
 
 ---
 ## Como executar 

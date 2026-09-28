@@ -1,3 +1,5 @@
-[2026-09-27 21:47:58,877] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-27 21:48:30,392] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\routes\\users.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
-[2026-09-27 21:48:30,534] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 22:44:53,190] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 22:45:17,411] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\routes\\users.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 22:45:17,613] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 22:46:27,409] INFO _log() L97    * Detected change in 'C:\\Users\\cjoao\\Desktop\\Codes\\MVP1\\cementing_acessories_api\\routes\\wells.py', reloading - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  
+[2026-09-27 22:46:27,574] INFO _log() L97    * Restarting with stat - call_trace=C:\Users\cjoao\Desktop\Codes\MVP1\MVP1\Lib\site-packages\werkzeug\_internal.py L97  

@@ -19,7 +19,7 @@ from schemas.error import ErrorSchema
 
 accessory_tag = Tag(
     name="Acessório",
-    description="Adição, visualização e remoção de acessórios à base",
+    description="Adição, atualização, visualização e remoção de acessórios à base",
 )
 
 api = APIBlueprint("accessories", __name__, abp_tags=[accessory_tag])

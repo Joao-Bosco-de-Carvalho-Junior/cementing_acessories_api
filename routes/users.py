@@ -25,7 +25,7 @@ from schemas.users_analyze_acessories import UserAnalyzeAccessoryCreateSchema
 
 user_tag = Tag(
     name="Usuário",
-    description="Adição, visualização e remoção de usuários à base",
+    description="Adição, atualização, visualização e remoção de usuários à base, além de analisar acessórios",
 )
 api = APIBlueprint("users", __name__, abp_tags=[user_tag])
 

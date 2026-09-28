@@ -23,7 +23,7 @@ from schemas.wells_use_accessories import WellUseAccessoryCreateSchema
 
 well_tag = Tag(
     name="Poço",
-    description="Adição, visualização e remoção de poços à base",
+    description="Adição, atualização, visualização e remoção de poços à base, além de associar acessórios",
 )
 api = APIBlueprint("wells", __name__, abp_tags=[well_tag])
 
